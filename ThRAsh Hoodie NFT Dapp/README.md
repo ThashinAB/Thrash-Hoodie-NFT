@@ -1,121 +1,66 @@
-# Welcome to The Stripes NFT 💎
+# 😎 ThRAsh Hoodie NFT
+---
+## :coat: Project
 
-![](https://github.com/The-Stripes-NFT/nft-minting-app/blob/main/logo-blob.png)
+**ThRAsh** NFT, a unique collection of randomly generated NFT hoodies. With _**9,999**_ different variations the hoodie collection is going to be massive.&#x20;
 
-All the code in these repos was created and explained by HashLips on the main YouTube channel.
+![](.gitbook/assets/logo\_size.jpg)
 
-To find out more please visit:
+The NFT collection will be launched in the **Rinkeby Testnet** (the test phase) and later on will be launched in the **Avalanche Mainnet** (the launch phase).
 
-[📺 YouTube](https://www.youtube.com/AliSolanki)
+The NFT will be having different characteristics so that you won't be having just a normal NFT.
 
-[💬 Telegram](https://t.me/studentsamaj)
+So what are you waiting for come join the **ThRAsh** community and become a member of the _"Hood"_.
 
-[🐦 Twitter](https://twitter.com/thestripesnft)
+{% hint style="info" %}
+_**Minting date will be updated later!**_
+{% endhint %}
 
-[ℹ️ Website](https://thestripesnft.com/)
+## :dart: Goal of the project
 
-# The Stripes NFT minting dapp 🔥
+To make NFTs that are unique, limited and have value in the long run.
 
-This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp. There are two ways of using this repo, you can go the simple route or the more complex one.
+We also plan to expand this project by introducing new functions (will be announced in the future) to create the _"ThRAshverse"_ so that the **Hood** stays relevant till the end of time.
 
-The simple route is so simple, all you need to do is download the build folder on the release page and change the configuration to fit your needs. (Follow the video for a walk through).
 
-The more complex route allows you to add additional functionality if you are comfortable with coding in react.js. (Follow the below instructions for a walk through).
+![](https://c.tenor.com/xfsFj7A6lJMAAAAd/galaxy.gif)
 
-## Installation 🛠️
+{% hint style="info" %}
+_**Important Notice: All of the information on this book are subject to change before and after the launch of ThRAsh. We will keep improving ThRAshverse over time.**_
+{% endhint %}
 
-If you are cloning the project then run this first, otherwise you can download the source code on the release page and skip this step.
 
-```sh
-git clone https://github.com/The-Stripes-NFT/nft-minting-app.git
-```
+---
+# 🤔 What are ThRAsh nfts?
 
-Make sure you have node.js installed so you can use npm, then run:
+The one of a kind Hoodie NFTs.
+---
 
-```sh
-npm install
-```
+ThRAsh NFTs are a collection of programmatically, randomly generated NFTs on the Rinkeby blockchain.&#x20;
 
-## Usage ℹ️
+**The collectible consists of 9,999** randomly designed hoodies from over 135+ traits. ThRAsh have a variety of hoodies, stickers and colors. Each hoodie has a unique name, color and style. Each specie has different rarity level, the possibilities are endless!
 
-In order to make use of this dapp, all you need to do is change the configurations to point to your smart contract as well as update the images and theme file.
+## :shrug: How to get a ThRAsh NFT
 
-For the most part all the changes will be in the `public` folder.
 
-To link up your existing smart contract, go to the `public/config/config.json` file and update the following fields to fit your smart contract, network and marketplace details. The cost field should be in wei.
+We know that you need the hoodie very badly, therefore we have planned to let you guys mint your very own ThRAsh Hoodie!&#x20;
 
-Note: this dapp is designed to work with the intended NFT smart contract, that only takes one parameter in the mint function "mintAmount". But you can change that in the App.js file if you need to use a smart contract that takes 2 params.
+The minting date will be announced later in this book, so keep an eye out for it :eyes:.
 
-```json
-{
-  "CONTRACT_ADDRESS": "0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
-  "SCAN_LINK": "https://polygonscan.com/token/0x827acb09a2dc20e39c9aad7f7190d9bc53534192",
-  "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "Matic",
-    "ID": 137
-  },
-  "NFT_NAME": "The Stripes NFT",
-  "SYMBOL": "TSNFT",
-  "MAX_SUPPLY": 992,
-  "WEI_COST": 75000000000000000,
-  "DISPLAY_COST": 0.075,
-  "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/the-stripes-nft",
-  "SHOW_BACKGROUND": true
-}
-```
+![](https://c.tenor.com/-vc61lxe9HYAAAAC/hide-and-seek-good-night.gif)
 
-Make sure you copy the contract ABI from remix and paste it in the `public/config/abi.json` file.
-(follow the youtube video if you struggle with this part).
 
-Now you will need to create and change 2 images and a gif in the `public/config/images` folder, `bg.png`, `example.gif` and `logo.png`.
+---
+# 🚧 Future Implementations
 
-Next change the theme colors to your liking in the `public/config/theme.css` file.
+The functions we'll introduce later after the main launch of ThRAsh NFTs.
+---
 
-```css
-:root {
-  --primary: #ebc908;
-  --primary-text: #1a1a1a;
-  --secondary: #ff1dec;
-  --secondary-text: #ffffff;
-  --accent: #ffffff;
-  --accent-text: #000000;
-}
-```
+These are some of the functions we are planning to implement to the **ThRAshverse** in the long run.
 
-Now you will need to create and change the `public/favicon.ico`, `public/logo192.png`, and
-`public/logo512.png` to your brand images.
+* Staking your ThRAsh hoodie&#x20;
+* ThRAsh coin
 
-Remember to update the title and description the `public/index.html` file
 
-```html
-<title>The Stripes NFT</title>
-<meta name="description" content="Mint your Stripes NFT" />
-```
 
-Also remember to update the short_name and name fields in the `public/manifest.json` file
-
-```json
-{
-  "short_name": "TSNFT",
-  "name": "The Stripes NFT"
-}
-```
-
-After all the changes you can run.
-
-```sh
-npm run start
-```
-
-Or create the build if you are ready to deploy.
-
-```sh
-npm run build
-```
-
-Now you can host the contents of the build folder on a server.
-
-That's it! you're done.
+![](../.gitbook/assets/RR.png)
