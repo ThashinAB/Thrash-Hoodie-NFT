@@ -256,7 +256,7 @@ function App() {
                   margin: "5px",
                 }}
               >
-                Roadmap
+                Gitbook
               </StyledButton>
               <StyledButton
                 style={{
@@ -292,7 +292,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {/*CONFIG.SYMBOL*/} thRAsh Hoodie costs {CONFIG.DISPLAY_COST}{" "}
+                  1 {/*CONFIG.SYMBOL*/} ThRAsh Hoodie costs {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
