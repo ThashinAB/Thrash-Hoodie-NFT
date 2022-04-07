@@ -20,6 +20,7 @@ export const StyledButton = styled.button`
   color: var(--secondary-text);
   width: 100px;
   cursor: pointer;
+  transition: transform 250ms;
   box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   -webkit-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
   -moz-box-shadow: 0px 6px 0px -2px rgba(250, 250, 250, 0.3);
@@ -27,6 +28,11 @@ export const StyledButton = styled.button`
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+  }
+  :hover{
+    background-color: #181818;
+    transform: scale(1.08, 1.08);
+
   }
 `;
 
@@ -52,6 +58,11 @@ export const StyledRoundButton = styled.button`
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+  }
+  :hover{
+    transform: scale(1.1, 1.1);
+    background-color: #EBD144;
+
   }
 `;
 
@@ -193,7 +204,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 8000) // react spinners
+    }, 7000) // react spinners
   }, []);
 
   useEffect(() => {
@@ -208,7 +219,7 @@ function App() {
     <div style={{textAlign: 'center',backgroundColor: "black", display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100vh' }}>
       {
         loading ?
-          <ClimbingBoxLoader color ={'white'} loading={loading} size={23} /> // react spinners
+          <ClimbingBoxLoader color ={'white'} loading={loading} size={23} /> // react spinner
           :
           <s.Screen >
             <s.Container
@@ -254,7 +265,10 @@ function App() {
                       color: "var(--primary-text)",
                     }}
                   >
-                    <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+                    <StyledLink style={{
+                                color: "#C9C9C9",
+                                cursor: "pointer",
+                              }}target={"_blank"} href={CONFIG.SCAN_LINK}>
                       {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
                     </StyledLink>
                   </s.TextDescription>
@@ -362,7 +376,11 @@ function App() {
                           >
                             {feedback}
                           </s.TextDescription>
-                          <a href={mintednftlink}>{mintednftlink}</a>
+                          <a style={{
+                                textAlign: "center",
+                                color: "white",
+                                cursor: "pointer",
+                              }} href={mintednftlink}>{mintednftlink}</a>
                           <s.SpacerMedium />
                           <s.Container ai={"center"} jc={"center"} fd={"row"}>
                             <StyledRoundButton
@@ -428,7 +446,7 @@ function App() {
                 <s.TextDescription
                   style={{
                     textAlign: "center",
-                    color: "var(--primary-text)",
+                    color: "black",
                   }}
                 >
                   Please make sure you are connected to the right network (
@@ -439,7 +457,7 @@ function App() {
                 <s.TextDescription
                   style={{
                     textAlign: "center",
-                    color: "var(--primary-text)",
+                    color: "black",
                   }}
                 >
                   We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
